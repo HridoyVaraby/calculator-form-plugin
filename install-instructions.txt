@@ -1,0 +1,54 @@
+CALCULATOR FORM PLUGIN - INSTALLATION INSTRUCTIONS
+================================================
+
+METHOD 1: WordPress Admin Upload (Recommended)
+----------------------------------------------
+1. Create a ZIP file of the entire "calculator-form-plugin" folder
+2. Log into your WordPress admin panel
+3. Go to Plugins → Add New → Upload Plugin
+4. Choose the ZIP file and click "Install Now"
+5. Click "Activate Plugin"
+
+METHOD 2: FTP/File Manager Upload
+--------------------------------
+1. Upload the entire "calculator-form-plugin" folder to:
+   /wp-content/plugins/calculator-form-plugin/
+2. Log into your WordPress admin panel
+3. Go to Plugins → Installed Plugins
+4. Find "Calculator Form Plugin" and click "Activate"
+
+USAGE
+-----
+Once activated, use the shortcode anywhere in your posts or pages:
+
+[calculator_form]
+
+Or with custom title and description:
+
+[calculator_form title="Your Title" description="Your description"]
+
+ADMIN SETTINGS
+--------------
+Access plugin settings at:
+WordPress Admin → Settings → Calculator Form
+
+SUPPORT
+-------
+- Check the README.md file for detailed documentation
+- Verify all files are uploaded correctly
+- Ensure your WordPress version is 4.0 or higher
+- Test in a staging environment first
+
+FILE STRUCTURE (for verification)
+---------------------------------
+calculator-form-plugin/
+├── calculator-form-plugin.php
+├── README.md
+├── install-instructions.txt
+├── assets/
+│   ├── css/
+│   │   └── calculator-form.css
+│   └── js/
+│       └── calculator-form.js
+└── templates/
+    └── calculator-form.php
