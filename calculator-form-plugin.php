@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Calculator Form Plugin
- * Plugin URI: https://your-website.com/calculator-form-plugin
+ * Plugin URI: https://varabit.com/calculator-form-plugin
  * Description: A WordPress plugin that provides a shortcode to embed a visa points calculator form on any page or post.
- * Version: 1.0.0
- * Author: Your Name
- * Author URI: https://your-website.com
+ * Version: 1.0.1
+ * Author: Hridoy Varaby | Varabit
+ * Author URI: https://varabit.com
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: calculator-form-plugin
@@ -21,7 +21,7 @@ class CalculatorFormPlugin {
     /**
      * Plugin version
      */
-    const VERSION = '1.0.0';
+    const VERSION = '1.0.1';
     
     /**
      * Plugin instance

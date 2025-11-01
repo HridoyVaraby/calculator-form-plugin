@@ -488,6 +488,13 @@ For support and feature requests, please contact the plugin developer.
 
 ## Changelog
 
+### Version 1.0.1
+- Removed default padding and margins for better Elementor integration
+- Made form full-width and left-aligned
+- Added comprehensive CSS customization documentation
+- Improved responsive design
+- Added multiple color scheme examples
+
 ### Version 1.0.0
 - Initial release
 - Basic calculator functionality
@@ -500,5 +507,9 @@ For support and feature requests, please contact the plugin developer.
 This plugin is licensed under the GPL v2 or later.
 
 ## Credits
+
+**Author:** Hridoy Varaby | Varabit  
+**Website:** [https://varabit.com](https://varabit.com)  
+**Plugin URI:** [https://varabit.com/calculator-form-plugin](https://varabit.com/calculator-form-plugin)
 
 Developed based on Australian Department of Immigration visa points calculation system.
