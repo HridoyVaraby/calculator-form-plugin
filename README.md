@@ -59,6 +59,16 @@ You can customize the form title and description:
 [calculator_form title="Visa Points Calculator" description="Calculate your eligibility points for Australian immigration"]
 ```
 
+### Elementor Integration
+
+This plugin is optimized for use with Elementor:
+
+1. **Add to any page**: Insert the shortcode using Elementor's Shortcode widget
+2. **Full-width ready**: The form adapts to container width automatically  
+3. **No default spacing**: Clean design allows you to control all margins and padding through Elementor
+4. **Custom CSS support**: Use Elementor's Advanced → Custom CSS panel for styling
+5. **Responsive design**: Works perfectly in Elementor's responsive preview modes
+
 ## How It Works
 
 The calculator evaluates points across multiple criteria:
@@ -131,19 +141,314 @@ calculator-form-plugin/
 
 ### CSS Customization
 
-Add custom CSS to your theme's `style.css` or use the WordPress Customizer:
+You can customize the calculator form appearance using custom CSS in several ways:
+
+#### Method 1: WordPress Customizer
+1. Go to **WordPress Admin → Appearance → Customize → Additional CSS**
+2. Add your custom CSS code
+3. Click "Publish" to save changes
+
+#### Method 2: Elementor Custom CSS
+1. Edit your page with Elementor
+2. Go to the widget/section containing the calculator form
+3. Navigate to **Advanced → Custom CSS**
+4. Add your CSS code targeting the form elements
+
+#### Method 3: Child Theme
+Add custom CSS to your child theme's `style.css` file.
+
+### CSS Selectors Reference
+
+Here are the main CSS selectors you can use to customize the form:
+
+#### Form Container & Layout
+```css
+/* Main form wrapper */
+.calculator-form-wrapper {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Form sections */
+.calculator-form-wrapper .fields {
+    margin-bottom: 25px;
+}
+```
+
+#### Typography & Colors
+```css
+/* Form title */
+.calculator-form-wrapper h2.cff-form-title {
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Form description */
+.calculator-form-wrapper .cff-form-description {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+/* Section headings */
+.calculator-form-wrapper h4 {
+    color: #34495e;
+    font-size: 18px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+}
+
+/* Field labels */
+.calculator-form-wrapper .fields label {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+/* Required field indicator */
+.calculator-form-wrapper .r {
+    color: #e74c3c;
+}
+```
+
+#### Form Fields
+```css
+/* Input fields and dropdowns */
+.calculator-form-wrapper select.field,
+.calculator-form-wrapper input.field {
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    padding: 12px 15px;
+    font-size: 16px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* Focus state */
+.calculator-form-wrapper select.field:focus,
+.calculator-form-wrapper input.field:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    outline: none;
+}
+
+/* Radio button containers */
+.calculator-form-wrapper .one_column {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+/* Radio button labels */
+.calculator-form-wrapper .one_column label {
+    cursor: pointer;
+    font-weight: normal;
+}
+```
+
+#### Points Summary Section
+```css
+/* Points summary container */
+.calculator-form-wrapper .points-summary {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* Individual points rows */
+.calculator-form-wrapper .points-row {
+    padding: 12px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Points input fields */
+.calculator-form-wrapper .points-row input {
+    background: #ffffff;
+    border: 1px solid #ced4da;
+    color: #495057;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Total points row */
+.calculator-form-wrapper .total-points {
+    background: #e8f4fd;
+    border-top: 3px solid #3498db;
+    font-weight: 700;
+}
+
+/* Total points input */
+.calculator-form-wrapper .total-points-input {
+    background: #3498db !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    border: none !important;
+}
+```
+
+#### Reset Button
+```css
+/* Reset button */
+.calculator-form-wrapper .reset-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Reset button hover effect */
+.calculator-form-wrapper .reset-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+```
+
+### Color Scheme Examples
+
+#### Modern Blue Theme
+```css
+.calculator-form-wrapper {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.calculator-form-wrapper h2.cff-form-title,
+.calculator-form-wrapper h4,
+.calculator-form-wrapper .fields label {
+    color: #ffffff;
+}
+
+.calculator-form-wrapper select.field,
+.calculator-form-wrapper input.field {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+}
+```
+
+#### Corporate Green Theme
+```css
+.calculator-form-wrapper {
+    background: #ffffff;
+    border: 3px solid #27ae60;
+}
+
+.calculator-form-wrapper h2.cff-form-title {
+    color: #27ae60;
+    border-bottom: 3px solid #27ae60;
+}
+
+.calculator-form-wrapper h4 {
+    color: #2c3e50;
+    background: #ecf0f1;
+    padding: 10px;
+}
+
+.calculator-form-wrapper .reset-button {
+    background: #27ae60;
+}
+
+.calculator-form-wrapper select.field:focus,
+.calculator-form-wrapper input.field:focus {
+    border-color: #27ae60;
+}
+```
+
+#### Dark Theme
+```css
+.calculator-form-wrapper {
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+
+.calculator-form-wrapper h2.cff-form-title,
+.calculator-form-wrapper h4,
+.calculator-form-wrapper .fields label {
+    color: #ecf0f1;
+}
+
+.calculator-form-wrapper select.field,
+.calculator-form-wrapper input.field {
+    background: #34495e;
+    color: #ecf0f1;
+    border: 1px solid #7f8c8d;
+}
+
+.calculator-form-wrapper .points-summary {
+    background: #34495e;
+}
+
+.calculator-form-wrapper .points-row input {
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+```
+
+### Responsive Customization
+
+Add mobile-specific styles:
 
 ```css
-/* Example: Change form background */
-.calculator-form-wrapper {
-    background: #f0f0f0;
-    border: 2px solid #333;
+@media (max-width: 768px) {
+    .calculator-form-wrapper {
+        padding: 20px 15px;
+    }
+    
+    .calculator-form-wrapper h2.cff-form-title {
+        font-size: 20px;
+    }
+    
+    .calculator-form-wrapper select.field,
+    .calculator-form-wrapper input.field {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
 }
+```
 
-/* Example: Customize button colors */
-.calculator-form-wrapper .reset-button {
-    background: #your-color;
-}
+### Advanced Customization Tips
+
+1. **Use `!important` if styles don't apply**: Some themes have very specific CSS that might override your styles.
+
+2. **Test on different devices**: Always check your customizations on mobile devices.
+
+3. **Use browser developer tools**: Right-click on form elements and "Inspect" to see current CSS classes.
+
+4. **Elementor-specific**: When using in Elementor, you can also use Elementor's built-in styling options for spacing, backgrounds, and typography.
+
+### Quick Reference - Most Used Selectors
+
+```css
+/* Form container */
+.calculator-form-wrapper { }
+
+/* Title and headings */
+.calculator-form-wrapper h2.cff-form-title { }
+.calculator-form-wrapper h4 { }
+
+/* All form fields */
+.calculator-form-wrapper select.field,
+.calculator-form-wrapper input.field { }
+
+/* Labels */
+.calculator-form-wrapper .fields label { }
+
+/* Reset button */
+.calculator-form-wrapper .reset-button { }
+
+/* Points summary */
+.calculator-form-wrapper .points-summary { }
+.calculator-form-wrapper .total-points-input { }
 ```
 
 ### JavaScript Hooks
