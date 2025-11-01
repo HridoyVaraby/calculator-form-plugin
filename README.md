@@ -491,6 +491,8 @@ For support and feature requests, please contact the plugin developer.
 ### Version 1.0.1
 - Removed default padding and margins for better Elementor integration
 - Made form full-width and left-aligned
+- Updated reset button to proper button size (not full width) and left-aligned
+- Set font family to inherit from theme defaults
 - Added comprehensive CSS customization documentation
 - Improved responsive design
 - Added multiple color scheme examples

@@ -79,6 +79,11 @@
     font-family: inherit;
 }
 
+/* Reset button should not be full width */
+.calculator-form-wrapper input.field.reset-button {
+    width: auto;
+}
+
 .calculator-form-wrapper select.field:focus,
 .calculator-form-wrapper input.field:focus {
     outline: none;
@@ -181,10 +186,17 @@
     margin: 25px 0 0 0;
     display: inline-block;
     transition: background-color 0.2s ease;
+    font-family: inherit;
+    width: auto;
 }
 
 .calculator-form-wrapper .reset-button:hover {
     background: #0052a3;
+}
+
+/* Ensure button container doesn't force full width */
+.calculator-form-wrapper .cff-button-field {
+    text-align: left;
 }
 
 .calculator-form-wrapper .clearer {
